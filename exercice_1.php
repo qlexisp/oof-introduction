@@ -6,11 +6,11 @@ class Beverage
     public $price;
     public $temperature;
 
-    public function __construct($color, $price, $temperature)
+    public function __construct($temperature, $price, $color)
     {
+        $this->temperature = $temperature;
         $this->color = $color;
         $this->price = $price;
-        $this->temperature = $temperature;
     }
 
     function getInfo()
@@ -19,7 +19,7 @@ class Beverage
     }
 }
 
-$beverage = new Beverage("Cola", 2, "black");
+$beverage = new Beverage(2, "black", "cold");
 $beverage->getInfo();
 
 ?>
